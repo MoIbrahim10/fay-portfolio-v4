@@ -25,10 +25,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-a {
-  text-decoration: none;
+  border-radius: 6px;
 }
 
 .visually-hidden {
@@ -84,6 +81,7 @@ body,
 }
 
 a{
+  text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -206,7 +204,7 @@ a{
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.7);
 }
 
 /* Popup content */
@@ -214,6 +212,7 @@ a{
   margin: auto;
   display: block;
   max-width: 80%;
+  max-height: calc(100vh - 200px);
 }
 
 /* Caption text */

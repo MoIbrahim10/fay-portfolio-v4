@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const closeBtn = document.querySelector('.image-popup .close');
   const prevBtn = document.querySelector('.image-popup .prev');
   const nextBtn = document.querySelector('.image-popup .next');
+  const yearDiv = document.getElementById('year');
+
+  yearDiv.textContent = new Date().getFullYear();
 
   let currentIndex = 0;
 
