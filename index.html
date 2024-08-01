@@ -49,8 +49,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- JS -->
-  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -92,7 +90,7 @@
           </picture>
           <picture>
             <source srcset="images/p2.webp" type="image/webp">
-            <img src="images/p2.png" alt="Image 2"  width="auto" height="260" loading="lazy">
+            <img src="images/p2.png" alt="Image 2" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p3.webp" type="image/webp">
@@ -153,15 +151,17 @@
   </main>
 
   <div id="image-popup" class="image-popup">
-  <span class="close">&times;</span>
-  <img class="popup-content" id="popup-image" alt="">
-  <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
-</div>
+    <span class="close">&times;</span>
+    <img class="popup-content" id="popup-image" alt="">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
 
-    <footer>
-      <p>© <span id="year"></span> Fay Dakrouri. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© <span id="year"></span> Fay Dakrouri. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>
