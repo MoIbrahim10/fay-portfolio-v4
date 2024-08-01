@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const images = document.querySelectorAll('.image-container img');
+  const imagesSrc = document.querySelectorAll('.image-container source');
   const popup = document.getElementById('image-popup');
   const popupImage = document.getElementById('popup-image');
   const closeBtn = document.querySelector('.image-popup .close');
@@ -12,9 +13,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let currentIndex = 0;
 
   function openPopup(index) {
+    console.log(imagesSrc[currentIndex].srcset)
     currentIndex = index;
     popup.style.display = 'block';
-    popupImage.src = images[index].src;
+    popupImage.src = imagesSrc[index].srcset;
   }
 
   function closePopup() {
@@ -23,12 +25,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   function showPrev() {
     currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-    popupImage.src = images[currentIndex].src;
+    popupImage.src = imagesSrc[currentIndex].srcset;
   }
 
   function showNext() {
     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-    popupImage.src = images[currentIndex].src;
+    popupImage.src = imagesSrc[currentIndex].srcset;
   }
 
   images.forEach((image, index) => {
