@@ -83,6 +83,10 @@ body,
   font-size: 12px;
 }
 
+a{
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .call-button {
   border: 0.5px solid #0C0C0C;
   box-shadow: 0 3px 3.6px rgba(0, 0, 0, 0.36),
@@ -93,6 +97,14 @@ body,
   padding: 7px 12px;
   border-radius: 5px;
   font-weight: 500;
+}
+
+.call-button:hover {
+  background-color: #373737;
+}
+
+.call-button:active {
+  background-color: #1A1A1A;
 }
 
 .social-links {
@@ -117,6 +129,11 @@ body,
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.social-links a:hover {
+  background-color: #FAFAFA;
+  color: #525252;
 }
 
 .tickers-container {
