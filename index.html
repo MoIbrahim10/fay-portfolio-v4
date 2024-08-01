@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fay Portfolio</title>
+  <title>Fay</title>
 
   <meta name="description"
     content="Fay. Product designer who loves to design and empathize. Committed to maintaining a zero-bullshit policy, working with studios and founders on delivering honest, impactful solutions that drive results.">
@@ -48,6 +48,9 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JS -->
+  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -85,72 +88,77 @@
         <div class="image-container">
           <picture>
             <source srcset="images/p1.webp" type="image/webp">
-            <img src="images/p1.png" alt="Image 1" width="auto" height="170" loading="lazy">
+            <img src="images/p1.png" alt="Image 1" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p2.webp" type="image/webp">
-            <img src="images/p2.png" alt="Image 2"  width="auto" height="170" loading="lazy">
+            <img src="images/p2.png" alt="Image 2"  width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p3.webp" type="image/webp">
-            <img src="images/p3.png" alt="Image 3" width="auto" height="170" loading="lazy">
+            <img src="images/p3.png" alt="Image 3" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p4.webp" type="image/webp">
-            <img src="images/p4.png" alt="Image 4" width="auto" height="170" loading="lazy">
+            <img src="images/p4.png" alt="Image 4" width="auto" height="260" loading="lazy">
           </picture>
-        </div>
-      </div>
-      <div class="image-ticker">
-        <div class="image-container">
           <picture>
             <source srcset="images/p5.webp" type="image/webp">
-            <img src="images/p5.png" alt="Image 5" width="auto" height="170" loading="lazy">
+            <img src="images/p5.png" alt="Image 5" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p6.webp" type="image/webp">
-            <img src="images/p6.png" alt="Image 6" width="auto" height="170" loading="lazy">
+            <img src="images/p6.png" alt="Image 6" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p7.webp" type="image/webp">
-            <img src="images/p7.png" alt="Image 7" width="auto" height="170" loading="lazy">
-          </picture>
-          <picture>
-            <source srcset="images/p8.webp" type="image/webp">
-            <img src="images/p8.png" alt="Image 8" width="auto" height="170" loading="lazy">
-          </picture>
-          <picture>
-            <source srcset="images/p9.webp" type="image/webp">
-            <img src="images/p9.png" alt="Image 9" width="auto" height="170" loading="lazy">
-          </picture>
-          <picture>
-            <source srcset="images/p10.webp" type="image/webp">
-            <img src="images/p10.png" alt="Image 10" width="auto" height="170" loading="lazy">
+            <img src="images/p7.png" alt="Image 7" width="auto" height="260" loading="lazy">
           </picture>
         </div>
       </div>
       <div class="image-ticker">
         <div class="image-container">
+
+          <picture>
+            <source srcset="images/p8.webp" type="image/webp">
+            <img src="images/p8.png" alt="Image 8" width="auto" height="260" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="images/p9.webp" type="image/webp">
+            <img src="images/p9.png" alt="Image 9" width="auto" height="260" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="images/p10.webp" type="image/webp">
+            <img src="images/p10.png" alt="Image 10" width="auto" height="260" loading="lazy">
+          </picture>
           <picture>
             <source srcset="images/p11.webp" type="image/webp">
-            <img src="images/p11.png" alt="Image 11" width="auto" height="170" loading="lazy">
+            <img src="images/p11.png" alt="Image 11" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p12.webp" type="image/webp">
-            <img src="images/p12.png" alt="Image 12" width="auto" height="170" loading="lazy">
+            <img src="images/p12.png" alt="Image 12" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p13.webp" type="image/webp">
-            <img src="images/p13.png" alt="Image 13" width="auto" height="170" loading="lazy">
+            <img src="images/p13.png" alt="Image 13" width="auto" height="260" loading="lazy">
           </picture>
           <picture>
             <source srcset="images/p14.webp" type="image/webp">
-            <img src="images/p14.png" alt="Image 14" width="auto" height="170" loading="lazy">
+            <img src="images/p14.png" alt="Image 14" width="auto" height="260" loading="lazy">
           </picture>
         </div>
       </div>
     </div>
   </main>
+
+  <div id="image-popup" class="image-popup">
+  <span class="close">&times;</span>
+  <img class="popup-content" id="popup-image" alt="">
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
 </body>
 
 </html>
