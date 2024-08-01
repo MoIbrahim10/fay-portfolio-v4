@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   function openPopup(index) {
     console.log(imagesSrc[currentIndex].srcset)
     currentIndex = index;
-    popup.style.display = 'block';
+    popup.style.display = 'flex';
     popupImage.src = imagesSrc[index].srcset;
   }
 
