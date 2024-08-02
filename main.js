@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const startAutoScroll = () => {
     scrollInterval = setInterval(() => {
       // Check if we've reached the end or the start and reverse direction if so
-      if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
         direction = -1; // Change direction to left
       } else if (container.scrollLeft <= 0) {
         direction = 1; // Change direction to right
