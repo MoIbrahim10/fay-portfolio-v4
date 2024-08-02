@@ -6,14 +6,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const closeBtn = document.querySelector('.image-popup .close');
   const prevBtn = document.querySelector('.image-popup .prev');
   const nextBtn = document.querySelector('.image-popup .next');
-  const yearDiv = document.getElementById('year');
-
-  yearDiv.textContent = new Date().getFullYear();
 
   let currentIndex = 0;
 
   function openPopup(index) {
-    console.log(imagesSrc[currentIndex].srcset)
     currentIndex = index;
     popup.style.display = 'flex';
     popupImage.src = imagesSrc[index].srcset;
@@ -42,7 +38,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   nextBtn.addEventListener('click', showNext);
 
   document.addEventListener('keydown', (event) => {
-    if (popup.style.display === 'block') {
+    if (popup.style.display === 'flex') {
       if (event.key === 'Escape') {
         closePopup();
       } else if (event.key === 'ArrowLeft') {

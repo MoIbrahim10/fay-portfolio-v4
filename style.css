@@ -25,7 +25,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .visually-hidden {
@@ -39,12 +39,12 @@ img {
   border: 0;
 }
 
-
-
 body {
   padding-block: 80px;
   max-width: 600px;
   margin: auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body,
@@ -54,8 +54,17 @@ body,
   gap: 40px;
 }
 
+
+.profile-description {
+  display: flex;
+  gap: 40px;
+  align-items: start;
+}
+
 .profile-picture {
-  max-width: 75px;
+  height: 100%;
+  max-height: 96px;
+  width: auto;
   aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
@@ -80,7 +89,7 @@ body,
   font-size: 12px;
 }
 
-a{
+a {
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -134,54 +143,64 @@ a{
   color: #525252;
 }
 
-.tickers-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.image-ticker {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-}
-
 .image-container {
   display: flex;
   gap: 10px;
   width: 100%;
   height: 100%;
-  animation: ticker 15s linear infinite;
+  padding-block: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.image-container:hover {
-  animation-play-state: paused;
+.image-container::-webkit-scrollbar {
+  display: none;
 }
+
 
 .image-container picture {
   flex-shrink: 0;
+  scroll-snap-align: center;
 }
 
 .image-container img {
   height: 100%;
   width: auto;
   display: block;
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(calc(-100% - 10px));
-  }
+  border-radius: 8px;
+  box-shadow: 0px 2px 1.8px 0px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  image-rendering: auto;
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-block: 40px;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  body,
+  .profile {
+    gap: 20px;
+  }
+
   .profile {
     padding: 20px;
+  }
+
+  .profile-description {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  img.profile-picture {
+    width: 75px;
+    height: 75px;
   }
 
   .actions {
@@ -190,8 +209,17 @@ a{
     justify-content: center;
     align-items: flex-start;
   }
-}
 
+  .image-container {
+    gap: 5px;
+    padding-inline: 20px;
+  }
+
+  .image-container img {
+    width: 80vw;
+    height: auto;
+  }
+}
 
 /* Popup container */
 .image-popup {
@@ -204,7 +232,7 @@ a{
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   align-items: center;
   justify-content: center;
 }
@@ -230,14 +258,20 @@ a{
 }
 
 /* Add Animation */
-.popup-content, .popup-caption {
+.popup-content,
+.popup-caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* The Close Button */
@@ -259,7 +293,8 @@ a{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -281,10 +316,7 @@ a{
   right: 0;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-footer p {
-  font-size: 12px;
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
